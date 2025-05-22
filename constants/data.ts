@@ -3,7 +3,7 @@ export const headerData = [
   { title: "Shop", href: "/shop" },
   { title: "Blog", href: "/blog" },
   { title: "Hot Deal", href: "/deal" },
-  // { title: "Contact", href: "/contact" },
+  //   { title: "Contact", href: "/contact" },
 ];
 
 export const quickLinksData = [
@@ -23,4 +23,11 @@ export const categoriesData = [
   { title: "Washing Machine", href: "washing-machine" },
   { title: "Kitchen Appliances", href: "kitchen-appliances" },
   { title: "gadget accessories", href: "gadget-accessories" },
+];
+
+export const productType = [
+  { title: "Gadget", value: "gadget" },
+  { title: "Appliances", value: "appliances" },
+  { title: "Refrigerators", value: "refrigerators" },
+  { title: "Others", value: "others" },
 ];
