@@ -8,22 +8,22 @@ import { GitCompareArrows, Headset, ShieldCheck, Truck } from "lucide-react";
 const extraData = [
   {
     title: "Free Delivery",
-    description: "Over $100 orders",
+    description: "Free shipping over $100",
     icon: <Truck size={45} />,
   },
   {
-    title: "Easy Returns",
-    description: "14-day guarantee",
+    title: "Free Return",
+    description: "Free return over $100",
     icon: <GitCompareArrows size={45} />,
   },
   {
-    title: "24/7 Support",
-    description: "Always ready",
+    title: "Customer Support",
+    description: "Friendly 24/7 customer support",
     icon: <Headset size={45} />,
   },
   {
-    title: "Money-Back",
-    description: "Shop worry-free",
+    title: "Money Back guarantee",
+    description: "Quality checked by our team",
     icon: <ShieldCheck size={45} />,
   },
 ];
