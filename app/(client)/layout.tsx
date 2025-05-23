@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "@/app/globals.css";
 import { Poppins } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -11,15 +10,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: {
-    template: "%s - Shopenix",
-    default: "Shopenix",
-  },
-  description:
-    "Discover great deals at Shopenix – your one-stop destination for shopping smart and fast.",
-};
 
 export default function RootLayout({
   children,
