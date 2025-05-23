@@ -11,9 +11,14 @@
   --color-shop_light_bg: #f9f9fb;
   --color-shop_light_blue: #d8e3f0;
   --color-shop_light_orange: #fddac2;
+  --color-shop_lighter_orange: #ffe7d3;
   --color-darkColor: #1f1f1f;
   --color-lightColor: #6b7280;
   --color-shop_light_green: #3abf38;
+  --color-dark_blue: #6c7fd8;
+  --color-shop_lighter_bg: #f1f3f8;
+  --color-shop_light_text: #686e7d;
+  --color-shop_lighter_text: #9ca1ad;
 }
 
 @theme inline {
