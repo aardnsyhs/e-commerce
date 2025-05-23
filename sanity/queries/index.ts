@@ -1,3 +1,4 @@
+import { Product } from "@/sanity.types";
 import { sanityFetch } from "../lib/live";
 import {
   BLOG_CATEGORIES,
@@ -54,7 +55,7 @@ const getLatestBlogs = async () => {
   }
 };
 
-const getDealProducts = async () => {
+const getDealProducts = async (): Promise<Product[]> => {
   try {
     const { data } = await sanityFetch({ query: DEAL_PRODUCTS });
     return data ?? [];
