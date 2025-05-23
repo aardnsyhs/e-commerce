@@ -9,6 +9,7 @@ import { Loader2 } from "lucide-react";
 import NoProductAvailable from "./NoProductAvailable";
 import ProductCard from "./ProductCard";
 import { Product } from "@/sanity.types";
+import Container from "./Container";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -34,7 +35,7 @@ const ProductGrid = () => {
   }, [selectedTab]);
 
   return (
-    <div>
+    <Container className="flex flex-col lg:px-0 my-10">
       <HomeTabBar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
       {loading ? (
         <div className="flex flex-col items-center justify-center py-10 min-h-80 gap-4 bg-gray-100 w-full mt-10">
@@ -61,7 +62,7 @@ const ProductGrid = () => {
       ) : (
         <NoProductAvailable selectedTab={selectedTab} />
       )}
-    </div>
+    </Container>
   );
 };
 
