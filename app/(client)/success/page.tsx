@@ -48,7 +48,7 @@ const SuccessPageContent = () => {
             {orderNumber}
           </span>
         </p>
-        <div className="w-full bg-gray-50 border rounded-sm p-4 shadow-sm">
+        <div className="w-full bg-gray-50 border rounded-sm p-4">
           <h2 className="font-semibold text-gray-900 mb-2">What&#39;s Next?</h2>
           <p className="text-gray-600 text-sm">
             Check your email for order confirmation
