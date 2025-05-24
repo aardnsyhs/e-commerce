@@ -32,6 +32,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import ResetCartButton from "@/components/ResetCartButton";
 
 const CartPage = () => {
   const {
@@ -66,18 +67,10 @@ const CartPage = () => {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     fetchAddresses();
   }, []);
-  const handleResetCart = () => {
-    const confirmed = window.confirm(
-      "Are you sure you want to reset your cart?"
-    );
-    if (confirmed) {
-      resetCart();
-      toast.success("Cart reset successfully!");
-    }
-  };
 
   const handleCheckout = async () => {
     setLoading(true);
@@ -123,8 +116,7 @@ const CartPage = () => {
                             {product?.images && (
                               <Link
                                 href={`/product/${product?.slug?.current}`}
-                                className="border p-0.5 md:p-1 mr-2 rounded-md
-                                 overflow-hidden group"
+                                className="border p-0.5 md:p-1 mr-2 rounded-md overflow-hidden group"
                               >
                                 <Image
                                   src={urlFor(product?.images[0]).url()}
@@ -197,13 +189,7 @@ const CartPage = () => {
                         </div>
                       );
                     })}
-                    <Button
-                      onClick={handleResetCart}
-                      className="m-5 font-semibold"
-                      variant="destructive"
-                    >
-                      Reset Cart
-                    </Button>
+                    <ResetCartButton resetCart={resetCart} />
                   </div>
                 </div>
                 <div>
