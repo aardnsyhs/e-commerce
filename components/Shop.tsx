@@ -71,7 +71,7 @@ const Shop = ({ categories, brands }: Props) => {
       );
       setProducts(data);
     } catch (error) {
-      console.log("Shop product fetching Error", error);
+      console.error("Shop product fetching Error", error);
     } finally {
       setLoading(false);
     }
