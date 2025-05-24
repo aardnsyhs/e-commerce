@@ -13,8 +13,8 @@
   --color-shop_light_orange: #fddac2;
   --color-shop_lighter_orange: #ffe7d3;
   --color-darkColor: #1f1f1f;
+  --color-darkRed: #dc143c;
   --color-lightColor: #6b7280;
-  --color-shop_light_green: #3abf38;
   --color-dark_blue: #6c7fd8;
   --color-shop_lighter_bg: #f1f3f8;
   --color-shop_light_text: #686e7d;
@@ -147,4 +147,8 @@
 
 body {
   font-family: var(--font-poppins);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

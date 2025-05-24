@@ -33,7 +33,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         {product?.status === "hot" && (
           <Link
             href={"/deal"}
-            className="absolute top-2 left-2 z-10 border border-shop_orange/50 p-1 rounded-full group-hover:border-shop_orange hover:text-shop_dark_green hoverEffect"
+            className="absolute top-2 left-2 z-10 border border-shop_orange/50 p-1 rounded-full group-hover:border-shop_orange hover:text-shop_dark_blue hoverEffect"
           >
             <Flame
               size={18}
