@@ -6,7 +6,6 @@ import dayjs from "dayjs";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const BlogPage = async () => {
   const blogs = await getAllBlogs(6);
@@ -33,22 +32,22 @@ const BlogPage = async () => {
                     {blog?.blogcategories?.map((item, index) => (
                       <p
                         key={index}
-                        className="font-semibold text-shop_dark_green tracking-wider"
+                        className="font-semibold text-shop_dark_blue tracking-wider"
                       >
                         {item?.title}
                       </p>
                     ))}
-                    <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_dark_green hover:cursor-pointer hoverEffect" />
+                    <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_dark_blue hover:cursor-pointer hoverEffect" />
                   </div>
-                  <p className="flex items-center gap-1 text-lightColor relative group hover:cursor-pointer hover:text-shop_dark_green hoverEffect">
+                  <p className="flex items-center gap-1 text-lightColor relative group hover:cursor-pointer hover:text-shop_dark_blue hoverEffect">
                     <Calendar size={15} />{" "}
                     {dayjs(blog.publishedAt).format("MMMM D, YYYY")}
-                    <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_dark_green hoverEffect" />
+                    <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_dark_blue hoverEffect" />
                   </p>
                 </div>
                 <Link
                   href={`/blog/${blog?.slug?.current}`}
-                  className="text-base font-bold tracking-wide mt-5 line-clamp-2 hover:text-shop_dark_green hoverEffect"
+                  className="text-base font-bold tracking-wide mt-5 line-clamp-2 hover:text-shop_dark_blue hoverEffect"
                 >
                   {blog?.title}
                 </Link>
