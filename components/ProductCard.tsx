@@ -3,10 +3,10 @@ import { urlFor } from "@/sanity/lib/image";
 import { Flame, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import AddToWishListButton from "./AddToWishListButton";
 import { Title } from "./ui/text";
 import PriceView from "./PriceView";
 import AddToCartButton from "./AddToCartButton";
+import ProductSideMenu from "./ProductSideMenu";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -24,7 +24,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             />
           </Link>
         )}
-        <AddToWishListButton product={product} />
+        <ProductSideMenu product={product} />
         {product?.status === "sale" && (
           <p className="absolute top-2 left-2 z-10 text-xs border border-darkColor/50 px-2 rounded-full group-hover:border-shop_light_orange group-hover:text-shop_dark_blue hoverEffect">
             Sale!

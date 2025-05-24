@@ -5,6 +5,7 @@ import useStore from "@/store";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const FavoriteButton = ({
   showProduct = false,
@@ -26,7 +27,7 @@ const FavoriteButton = ({
     e.preventDefault();
     if (product?._id) {
       addToFavorite(product).then(() => {
-        alert(
+        toast.success(
           existingProduct
             ? "Product removed successfully!"
             : "Product added successfully!"
