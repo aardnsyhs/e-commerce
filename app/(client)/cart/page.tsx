@@ -62,7 +62,7 @@ const CartPage = () => {
         setSelectedAddress(data[0]);
       }
     } catch (error) {
-      console.log("Addresses fetching error:", error);
+      console.error("Addresses fetching error:", error);
     } finally {
       setLoading(false);
     }
