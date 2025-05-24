@@ -32,7 +32,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import ResetCartButton from "@/components/ResetCartButton";
+import ConfirmDialog from "@/components/ConfirmDialog";
 
 const CartPage = () => {
   const {
@@ -189,7 +189,16 @@ const CartPage = () => {
                         </div>
                       );
                     })}
-                    <ResetCartButton resetCart={resetCart} />
+                    <ConfirmDialog
+                      title="Reset your cart?"
+                      description="This will remove all items from your cart. This action cannot be undone."
+                      triggerText="Reset Cart"
+                      variant="destructive"
+                      onConfirm={() => {
+                        resetCart();
+                        toast.success("Cart reset successfully!");
+                      }}
+                    />
                   </div>
                 </div>
                 <div>
