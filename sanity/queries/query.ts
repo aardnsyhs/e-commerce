@@ -21,6 +21,18 @@ const DEAL_PRODUCTS = defineQuery(
   }`
 );
 
+const ALL_PRODUCT_QUERY = defineQuery(
+  `*[_type == "product"]{
+    _id,
+    name,
+    slug,
+    images,
+    price,
+    discount,
+    stock
+  }`
+);
+
 const PRODUCT_BY_SLUG_QUERY = defineQuery(
   `*[_type == "product" && slug.current == $slug] | order(name asc) [0]`
 );
@@ -35,6 +47,7 @@ const MY_ORDERS_QUERY =
   ...,product->
 }
 }`);
+
 const GET_ALL_BLOG = defineQuery(
   `*[_type == 'blog'] | order(publishedAt desc)[0...$quantity]{
   ...,  
@@ -85,10 +98,12 @@ const OTHERS_BLOG_QUERY = defineQuery(`*[
     "slug": slug.current,
   }
 }`);
+
 export {
   BRANDS_QUERY,
   LATEST_BLOG_QUERY,
   DEAL_PRODUCTS,
+  ALL_PRODUCT_QUERY,
   PRODUCT_BY_SLUG_QUERY,
   BRAND_QUERY,
   MY_ORDERS_QUERY,

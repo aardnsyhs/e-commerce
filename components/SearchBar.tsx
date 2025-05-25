@@ -1,9 +1,12 @@
-import { Search } from "lucide-react";
+import { getAllProducts } from "@/sanity/queries";
+import SearchClient from "./SearchClient";
 
-const SearchBar = () => {
+const SearchBar = async () => {
+  const products = await getAllProducts();
+
   return (
     <div>
-      <Search className="w-5 h-5 hover:text-shop_dark_blue hoverEffect" />
+      <SearchClient products={products} />
     </div>
   );
 };
