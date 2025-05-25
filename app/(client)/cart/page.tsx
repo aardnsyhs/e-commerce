@@ -281,7 +281,6 @@ const CartPage = () => {
                     )}
                   </div>
                 </div>
-                {/* Order summary for mobile view */}
                 <div className="md:hidden fixed bottom-0 left-0 w-full bg-white pt-2">
                   <div className="bg-white p-4 rounded-lg border mx-4">
                     <h2>Order Summary</h2>

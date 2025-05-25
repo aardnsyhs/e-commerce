@@ -37,7 +37,6 @@ const SearchModal = ({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="rounded-xl p-6 shadow-lg"
         style={{
           width: "95vw",
           maxWidth: "1200px",
@@ -105,7 +104,6 @@ const SearchModal = ({
                     </button>
                   ) : (
                     <div className="flex gap-4 p-3 border rounded-lg items-start relative w-full">
-                      {/* Gambar Produk */}
                       <div className="w-20 h-20 relative shrink-0 rounded-md overflow-hidden border">
                         {product.images?.[0] && (
                           <Image
