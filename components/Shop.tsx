@@ -1,7 +1,7 @@
 "use client";
 
 import { BRANDS_QUERYResult, Category, Product } from "@/sanity.types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Container from "./Container";
 import { useSearchParams } from "next/navigation";
 import { client } from "@/sanity/lib/client";
@@ -42,7 +42,7 @@ const Shop = ({ categories, brands }: Props) => {
   );
   const [selectedPrice, setSelectedPrice] = useState<string | null>(null);
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     setLoading(true);
     try {
       let minPrice = 0;
@@ -75,11 +75,11 @@ const Shop = ({ categories, brands }: Props) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [selectedCategory, selectedBrand, selectedPrice]);
 
   useEffect(() => {
     fetchProducts();
-  }, [selectedCategory, selectedBrand, selectedPrice]);
+  }, [fetchProducts]);
 
   const resetFilters = () => {
     setSelectedCategory(null);
